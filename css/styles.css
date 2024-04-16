@@ -430,10 +430,6 @@ textarea {
 /* =============
     Header
 ============= */
-header {
-  display: none;
-}
-
 /* =============
     Footer
 ============= */
@@ -539,4 +535,22 @@ footer form button {
 }
 #index-weather p {
   margin-bottom: 24px;
+}
+
+/* =============
+    Views
+============= */
+#views-hero {
+  padding: 32px 16px;
+  text-align: center;
+}
+#views-hero h1 {
+  margin-bottom: 32px;
+}
+#views-hero p {
+  color: var(--blue);
+}
+
+#views-gallery li img {
+  width: 100%;
 }
