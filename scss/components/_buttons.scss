@@ -1,3 +1,17 @@
 /* =============
     Buttons
 ============= */
+
+button{
+    border:none;
+    cursor: pointer;
+}
+
+.redButton{
+    background-color: var(--red);
+    color: var(--white);
+    font-size: rem-calc(18);
+    font-weight: 800;
+    padding: 16px 40px;
+    border-radius: 8px;
+}

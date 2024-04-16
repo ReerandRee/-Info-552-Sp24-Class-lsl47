@@ -1,0 +1,109 @@
+/* =============
+    Index
+============= */
+
+#index-hero{
+        margin: 32px 0;
+        text-align: center;
+        >div{
+                padding: 0 16px;
+
+                p{
+                        font-size: rem-calc(18);
+                        color: var(--blue);
+                        line-height: rem-calc(16);                        
+                }
+                button{
+                        margin: 32px 0;
+                }
+        }
+        img{
+                width:100%;
+                
+        }
+        h1{
+
+        }
+
+        p{
+
+        }
+
+        button{
+
+        }
+
+}
+#index-brands{
+
+}
+#index-planning{
+        padding: 32px 16px;
+        background-color: var(--blue);
+        color: var(--green);
+
+        text-align: center;
+
+        h1{
+                text-align: left;
+        }
+
+        p{
+                text-align: left;
+                margin-bottom: 32px;
+        }
+        
+        #planning-hero{
+                width:100%;
+        }
+
+        #planning-callout{
+                background-color: var(--green);
+                color: var(--blue);
+                text-align: center;
+                border-radius: 10px;
+                padding: 32px 50px;
+                width: 244px;
+                margin-top: -20px;
+
+                display: inline-block;
+
+                #clock-container{
+                        margin: 0px auto 26px;
+                        height: 45px;
+                        width: 45px;
+                        background-color: var(--blue); 
+                        border-radius: 100%;
+
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                h3{
+                        font-size: rem-calc(25);
+                        font-weight: 500;
+                }
+                
+        }
+
+}
+
+#index-weather{
+ padding:32px 16px;
+ 
+ h1{
+        color: var(--blue);
+ }
+
+ h2{
+        color: var(--aqua);
+        font-size: rem-calc(22);
+        font-weight: 800;
+        margin-bottom: 8px;
+ }
+ p{
+        margin-bottom: 24px;
+ }
+}

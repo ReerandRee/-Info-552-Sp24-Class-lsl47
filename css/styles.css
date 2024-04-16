@@ -13,6 +13,13 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --aqua: #598392;
+  --blue: #124559;
+  --blueDark: #01161E;
+  --green: #AEC3B0;
+  --seaFoamGreen: #EFF6E0;
+  --redDark: #AD403A;
+  --red: #F25C54;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -331,12 +338,72 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.hide_img {
+  display: none;
+}
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.pageTitle {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--blue);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.contentSectionTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contentSectionSubTitle {
+  font-size: 1.375rem;
+  font-weight: 800;
+}
+
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.redButton {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 800;
+  padding: 16px 40px;
+  border-radius: 8px;
+}
+
 /* =============
     Forms
 ============= */
@@ -363,6 +430,113 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  display: none;
+}
+
 /* =============
     Footer
 ============= */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 32px;
+}
+footer h2 {
+  padding-top: 200px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+footer form input {
+  border-radius: 0;
+  border: none;
+}
+footer form button {
+  background-color: var(--red);
+  padding: 16px;
+}
+/* =============
+    Index
+============= */
+#index-hero {
+  margin: 32px 0;
+  text-align: center;
+}
+#index-hero > div {
+  padding: 0 16px;
+}
+#index-hero > div p {
+  font-size: 1.125rem;
+  color: var(--blue);
+  line-height: 1rem;
+}
+#index-hero > div button {
+  margin: 32px 0;
+}
+#index-hero img {
+  width: 100%;
+}
+#index-planning {
+  padding: 32px 16px;
+  background-color: var(--blue);
+  color: var(--green);
+  text-align: center;
+}
+#index-planning h1 {
+  text-align: left;
+}
+#index-planning p {
+  text-align: left;
+  margin-bottom: 32px;
+}
+#index-planning #planning-hero {
+  width: 100%;
+}
+#index-planning #planning-callout {
+  background-color: var(--green);
+  color: var(--blue);
+  text-align: center;
+  border-radius: 10px;
+  padding: 32px 50px;
+  width: 244px;
+  margin-top: -20px;
+  display: inline-block;
+}
+#index-planning #planning-callout #clock-container {
+  margin: 0px auto 26px;
+  height: 45px;
+  width: 45px;
+  background-color: var(--blue);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#index-planning #planning-callout h3 {
+  font-size: 1.5625rem;
+  font-weight: 500;
+}
+
+#index-weather {
+  padding: 32px 16px;
+}
+#index-weather h1 {
+  color: var(--blue);
+}
+#index-weather h2 {
+  color: var(--aqua);
+  font-size: 1.375rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+#index-weather p {
+  margin-bottom: 24px;
+}

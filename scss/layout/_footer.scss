@@ -1,3 +1,37 @@
 /* =============
     Footer
 ============= */
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding-bottom: 32px;
+
+    h2{
+        padding-top: 200px;
+        font-size: rem-calc(16);
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    form{
+        input{
+            border-radius: 0;
+            border: none;
+        }
+
+        button{
+            background-color: var(--red);
+            padding: 16px;
+        }
+    }
+
+    ul{
+        li{
+            a{
+
+            }
+        }
+    }
+}
