@@ -3,8 +3,9 @@
 ============= */
 
 footer{
-    background-color: var(--black);
-    color: var(--white);
+    background-image: url("../img/footer/footer.jpg");
+    background-size: cover;
+    background-position: center bottom;
     text-align: center;
     padding-bottom: 32px;
 
@@ -30,7 +31,8 @@ footer{
     ul{
         li{
             a{
-
+                color:var(--white);
+                font-size: rem-calc(30);
             }
         }
     }
