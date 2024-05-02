@@ -4,19 +4,97 @@
 
 #views-hero{
         padding: 32px 16px;
+
+        @include md{
+                padding: 32px 8px;      
+        }
         text-align: center;
         h1{
                 margin-bottom: 32px;
         }
         p{
-                color: var(--blue)
+                color: var(--blue);
+
+                @include xl{
+                        padding: 0 300px;
+                }
         }
 }
 
 #views-gallery{
+
+        padding: 0 16px 32px 16px;
+
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 25vh 25vh 50vh 50vh 30vh;
+        grid-template-areas: 
+        "g1 g2"
+        "g3 g4"
+        "g5 g5"
+        "g6 g6"
+        "g7 g7";
+
+        @include md{
+                padding: 0 8vw 32px 8vw;
+
+                grid-template-columns: repeat(6,1fr);
+                grid-template-rows: 25vh 25vh 35vh 25vh;
+                grid-template-areas: 
+                "g1 g1 g1 g2 g2 g2"
+                "g3 g3 g3 g4 g4 g4"
+                "g5 g5 g5 g5 g6 g6"
+                "g7 g7 g7 g7 g7 g7";
+        }
+
+        @include xl{
+                padding: 0 2vw 40px 2vw;
+
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: 25vh 35vh 25vh;
+                grid-template-areas: 
+                "g1 g2 g3 g4"
+                "g5 g5 g5 g6"
+                "g7 g7 g7 g7";
+        }
+
         li{
-                img{
-                        width: 100%;
+                background-position: center;
+                background-size: cover;
+        }
+
+        #g1{
+                grid-area: g1;
+                background-image: url("../img/views/gallery-1.jpg");
+        }
+
+        #g2{
+                grid-area: g2;
+                background-image: url("../img/views/gallery-2.jpg");
+        }
+        #g3{
+                grid-area: g3;
+                background-image: url("../img/views/gallery-3.jpg");
+        }
+        #g4{
+                grid-area: g4;
+                background-image: url("../img/views/gallery-4.jpg");
+
+                @include lg{
+                        background-position: center 80%;
                 }
+        }
+        #g5{
+                grid-area: g5;
+                background-image: url("../img/views/gallery-5.jpg");
+        }
+        #g6{
+                grid-area: g6;
+                background-image: url("../img/views/gallery-6.jpg");
+        }
+        #g7{
+                grid-area: g7;
+                background-image: url("../img/views/gallery-7.jpg");
         }
 }
