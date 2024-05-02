@@ -350,6 +350,46 @@ ul li {
   display: none;
 }
 
+@media (min-width: 1440px) {
+  .xxl-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 1440px auto;
+    grid-template-columns: auto 1440px auto;
+        grid-template-areas: ". xxl-content .";
+  }
+  .xxl-grid .xxl-grid-item {
+    grid-area: xxl-content;
+  }
+}
+
+@media (min-width: 1440px) {
+  .xxl-grid .xxl-grid-item {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .xl-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 1200px auto;
+    grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". xl-content .";
+  }
+  .xl-grid .xl-grid-item {
+    grid-area: xl-content;
+  }
+}
+
+@media (min-width: 1440px) {
+  .xl-grid .xl-grid-item {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+
 /* =============
     Typography
 ============= */
@@ -460,6 +500,12 @@ footer {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+@media (min-width: 1024px) {
+  footer {
+    background-position: center;
+    height: 70vh;
+  }
+}
 footer > div {
   padding-bottom: 32px;
 }
@@ -479,6 +525,21 @@ footer > div form {
 @media (min-width: 768px) {
   footer > div form {
     width: 50vw;
+  }
+}
+@media (min-width: 1024px) {
+  footer > div form {
+    width: 45vw;
+  }
+}
+@media (min-width: 1200px) {
+  footer > div form {
+    width: 40vw;
+  }
+}
+@media (min-width: 1440px) {
+  footer > div form {
+    width: 25vw;
   }
 }
 footer > div form > div {
@@ -552,6 +613,16 @@ footer > div ul li a {
     padding: 0 56px;
   }
 }
+@media (min-width: 1024px) {
+  #index-hero > div {
+    padding: 0 20vw;
+  }
+}
+@media (min-width: 1200px) {
+  #index-hero > div {
+    padding: 0 400px;
+  }
+}
 #index-hero > div p {
   font-size: 1.125rem;
   color: var(--blue);
@@ -560,15 +631,146 @@ footer > div ul li a {
 #index-hero > div button {
   margin: 32px 0;
 }
-#index-hero #index-hero-image {
+
+#index-hero-image {
   height: 70vh;
   background-image: url("../img/home/hero.jpg");
   background-size: cover;
   background-position: center bottom;
 }
 @media (min-width: 768px) {
-  #index-hero #index-hero-image {
+  #index-hero-image {
     height: 60vh;
+  }
+}
+@media (min-width: 1024px) {
+  #index-hero-image {
+    height: 75vh;
+    background-position: center bottom;
+  }
+}
+
+#index-brands {
+  padding: 32px 16px;
+}
+#index-brands ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 26px 1fr 26px 1fr 26px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  -ms-grid-rows: auto 26px auto 26px auto;
+      grid-template-areas: "tnf tnf yeti yeti" "columbia columbia coleman coleman" ". patagonia patagonia .";
+}
+@media (min-width: 768px) {
+  #index-brands ul {
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: auto 20px auto;
+        grid-template-areas: "tnf tnf yeti yeti columbia columbia" ". coleman coleman patagonia patagonia .";
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  #index-brands ul {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "tnf yeti columbia coleman patagonia";
+  }
+}
+#index-brands ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#index-brands ul #tnf {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: tnf;
+}
+#index-brands ul #yeti {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: yeti;
+}
+#index-brands ul #columbia {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: columbia;
+}
+#index-brands ul #coleman {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: coleman;
+}
+#index-brands ul #patagonia {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: patagonia;
+}
+@media (min-width: 768px) {
+  #index-brands ul #tnf {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  #index-brands ul #yeti {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+  }
+  #index-brands ul #columbia {
+    -ms-grid-row: 1;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 3;
+  }
+  #index-brands ul #coleman {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+  }
+  #index-brands ul #patagonia {
+    -ms-grid-row: 3;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+  }
+}
+@media (min-width: 1024px) {
+  #index-brands ul #tnf {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #index-brands ul #yeti {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  #index-brands ul #columbia {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  #index-brands ul #coleman {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+  }
+  #index-brands ul #patagonia {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
   }
 }
 
@@ -603,6 +805,16 @@ footer > div ul li a {
   #index-planning #planning-hero {
     height: 50vw;
     width: 80vw;
+  }
+}
+@media (min-width: 1024px) {
+  #index-planning #planning-hero {
+    margin-left: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  #index-planning #planning-hero {
+    width: 928px;
   }
 }
 #index-planning #planning-callout {
@@ -644,16 +856,68 @@ footer > div ul li a {
     padding: 32px 15vw;
   }
 }
-#index-weather h1 {
+@media (min-width: 1024px) {
+  #index-weather {
+    padding: 40px 15vw;
+  }
+}
+@media (min-width: 1200px) {
+  #index-weather #index-weather-xl-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 32px auto;
+    grid-template-columns: 50% auto;
+        grid-template-areas: "weather-content weather-icons";
+    gap: 32px;
+  }
+}
+#index-weather #index-weather-xl-grid #weather-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 16px 2fr;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  #index-weather #index-weather-xl-grid #weather-icons {
+    -ms-grid-columns: 2fr 32px 2fr 32px 2fr 32px 2fr;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 32px;
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  #index-weather #index-weather-xl-grid #weather-icons {
+    grid-area: weather-icons;
+  }
+}
+@media (min-width: 1200px) {
+  #index-weather #index-weather-xl-grid #weather-icons {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+#index-weather #index-weather-xl-grid #weather-icons li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#index-weather #index-weather-xl-grid #weather-content h1 {
   color: var(--blue);
 }
-#index-weather h2 {
+#index-weather #index-weather-xl-grid #weather-content h2 {
   color: var(--aqua);
   font-size: 1.375rem;
   font-weight: 800;
   margin-bottom: 8px;
 }
-#index-weather p {
+#index-weather #index-weather-xl-grid #weather-content p {
   margin-bottom: 24px;
 }
 

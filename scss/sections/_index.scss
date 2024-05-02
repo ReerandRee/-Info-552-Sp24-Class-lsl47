@@ -12,6 +12,15 @@
                         padding: 0 56px;
                 }
 
+                @include lg{
+                        padding: 0 20vw;
+                }
+
+                @include xl{
+                        padding: 0 400px;
+                }
+
+
                 p{
                         font-size: rem-calc(18);
                         color: var(--blue);
@@ -22,19 +31,71 @@
                 }
         }
 
-        #index-hero-image{
-                height: 70vh;
-                background-image: url('../img/home/hero.jpg');
-                background-size: cover;
-                background-position: center bottom;
 
-                @include md{
-                        height: 60vh;
-                }
+}
+#index-hero-image{
+        height: 70vh;
+        background-image: url('../img/home/hero.jpg');
+        background-size: cover;
+        background-position: center bottom;
+
+        @include md{
+                height: 60vh;
+        }
+
+        @include lg{
+                height: 75vh;
+                background-position: center bottom;
         }
 }
 #index-brands{
+        padding: 32px 16px;
+        ul{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 26px;
 
+                grid-template-areas: 
+                "tnf tnf yeti yeti" 
+                "columbia columbia coleman coleman"
+                ". patagonia patagonia .";
+
+                @include md{
+                        grid-template-columns: repeat(6, 1fr);
+                        grid-template-areas: 
+                        "tnf tnf yeti yeti columbia columbia" 
+                        ". coleman coleman patagonia patagonia .";
+
+                        gap: 20px;
+                }
+
+                @include lg{
+                        grid-template-columns: repeat(5, 1fr);
+                        grid-template-areas: 
+                        "tnf yeti columbia coleman patagonia";
+                }
+
+                li{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+                #tnf{
+                        grid-area: tnf;
+                }
+                #yeti{
+                        grid-area: yeti;
+                }
+                #columbia{
+                        grid-area: columbia;
+                }
+                #coleman{
+                        grid-area: coleman;
+                }
+                #patagonia{
+                        grid-area: patagonia;
+                }
+        }
 }
 #index-planning{
         padding: 32px 16px;
@@ -68,6 +129,14 @@
                         height: 50vw;
                         width: 80vw;
                 }
+
+                @include lg{
+                        margin-left: 200px;
+                }
+
+                @include xl{
+                        width: 928px;
+                }
         }
 
         #planning-callout{
@@ -80,7 +149,7 @@
                 margin-top: -20px;
 
                 @include md{
-                 //Do next week       
+                        // margin-top: -60px;
                 }
 
                 display: inline-block;
@@ -113,18 +182,62 @@
         @include md{
                 padding: 32px 15vw;
         }
-        
-        h1{
-                color: var(--blue);
+
+        @include lg{
+                padding: 40px 15vw;
         }
 
-        h2{
-                color: var(--aqua);
-                font-size: rem-calc(22);
-                font-weight: 800;
-                margin-bottom: 8px;
+        #index-weather-xl-grid{
+
+                @include xl{
+                        display: grid;
+                        grid-template-columns: 50% auto;
+
+                        grid-template-areas: "weather-content weather-icons";
+                        gap: 32px;
+                }
+                #weather-icons{
+                        display: grid;
+                        grid-template-columns: repeat(2,2fr);
+                        gap: 16px;
+                        
+                        @include md{
+                             grid-template-columns: repeat(4,2fr);
+                             gap: 32px;
+             
+                             margin-bottom: 16px;
+                        }
+
+                        @include xl{
+                                grid-area: weather-icons;
+                        }
+                        li{
+                             display: flex;
+                             justify-content: center;
+                             align-items: center;
+                        }
+                        
+                     }
+        
+                     #weather-content{
+                        h1{
+                                color: var(--blue);
+                        }
+                
+                        h2{
+                                color: var(--aqua);
+                                font-size: rem-calc(22);
+                                font-weight: 800;
+                                margin-bottom: 8px;
+                        }
+                        p{
+                                margin-bottom: 24px;
+                        }
+                     }
+
+
+
         }
-        p{
-                margin-bottom: 24px;
-        }
+        
+        
 }
