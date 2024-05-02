@@ -7,7 +7,6 @@
         text-align: center;
         >div{
                 padding: 0 16px;
-
                 @include md{
                         padding: 0 56px;
                 }
@@ -19,7 +18,6 @@
                 @include xl{
                         padding: 0 400px;
                 }
-
 
                 p{
                         font-size: rem-calc(18);
