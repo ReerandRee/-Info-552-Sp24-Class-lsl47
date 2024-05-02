@@ -10,4 +10,80 @@
 #contact-form{
         background-color: var(--seaFoamGreen);
         padding: 32px 16px;
+
+        form{
+                display: grid;
+                gap: 16px;
+                grid-template-rows: 90px 90px 200px auto;
+
+                @include md{
+
+                        padding: 0 10vw;
+                        grid-template-columns: 50% auto;
+                        grid-template-rows: 8vh 16vh auto;
+                        grid-template-areas:
+                        "name email"
+                        "message message"
+                        ". send-button";
+                }
+                div{
+                        background-color: var(--white);
+                        display: flex;
+                        align-items: flex-end;
+
+                        input{
+                                width: 100%;
+                                padding-bottom: 5px;
+                                padding-left: 8px;
+                                box-sizing: border-box;
+                        }
+
+                        textarea{
+                                padding: 8px;
+                                height: 100%;
+                                width: 100%;
+                                padding-left: 8px;
+                                box-sizing: border-box;
+                        }
+
+                        ::placeholder{
+                                color: var(--blueDark);
+                                opacity: 1; 
+                             }
+             
+                             ::ms-input-placeholder{
+                                 color: var(--blueDark);
+                             }
+                }
+                
+                #contact-name{
+                        @include md{
+                                grid-area: name;
+                        }
+
+                }
+
+                #contact-email{
+                        @include md{
+                                grid-area: email;
+                        }
+                }
+
+                #contact-message{
+                        align-items: flex-start;
+                        @include md{
+                                grid-area: message;
+                        }
+                }
+
+                #contact-button{
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                        background-color: transparent;
+
+                        @include md{
+                                grid-area: send-button;
+                        }
+                }
+        }
 }
