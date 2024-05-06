@@ -338,6 +338,10 @@ template {
 /* =============
     Base
 ============= */
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -348,6 +352,10 @@ ul li {
 
 .hide_img {
   display: none;
+}
+
+.header-padding {
+  padding-top: 90px;
 }
 
 @media (min-width: 1440px) {
@@ -487,9 +495,161 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
+.hide-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hide-menu {
+    display: block;
+  }
+}
+
+#main-nav {
+  background-color: var(--blueDark);
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  #main-nav {
+    background-color: var(--white);
+    padding: 0px 16px 0px 0px;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+}
+#main-nav ul li {
+  text-align: right;
+}
+#main-nav ul li a:link, #main-nav ul li a:visited {
+  display: inline-block;
+  padding: 16px 0;
+  color: var(--white);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+@media (min-width: 768px) {
+  #main-nav ul li a:link, #main-nav ul li a:visited {
+    color: var(--blue);
+  }
+}
+#main-nav ul li a:link i, #main-nav ul li a:visited i {
+  color: var(--red);
+  margin-right: 8px;
+}
+#main-nav ul li a:hover, #main-nav ul li a:active {
+  color: var(--red);
+}
+
 /* =============
     Header
 ============= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--white);
+}
+
+#header-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% auto;
+  grid-template-columns: 20% auto;
+      grid-template-areas: "logo burger" "nav nav";
+}
+@media (min-width: 768px) {
+  #header-container {
+    -ms-grid-columns: 30% auto;
+    grid-template-columns: 30% auto;
+        grid-template-areas: "logo nav";
+  }
+}
+@media (min-width: 1024px) {
+  #header-container {
+    -ms-grid-columns: 40% auto;
+    grid-template-columns: 40% auto;
+  }
+}
+@media (min-width: 1200px) {
+  #header-container {
+    -ms-grid-columns: 45% auto;
+    grid-template-columns: 45% auto;
+  }
+}
+@media (min-width: 1440px) {
+  #header-container {
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+  }
+}
+#header-container #logo-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  padding: 16px 0 16px 16px;
+  grid-area: logo;
+}
+#header-container #burger-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: burger;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 768px) {
+  #header-container #burger-container {
+    display: none;
+  }
+}
+#header-container #burger-container button {
+  background-color: var(--white);
+  border: none;
+  color: var(--blue);
+  font-size: 1.125rem;
+  padding: 16px;
+}
+#header-container #main-nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+}
+@media (min-width: 768px) {
+  #header-container #logo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #header-container #main-nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+}
+
 /* =============
     Footer
 ============= */
@@ -935,12 +1095,12 @@ footer > div ul li a {
     Views
 ============= */
 #views-hero {
-  padding: 32px 16px;
+  padding: 90px 16px 32px;
   text-align: center;
 }
 @media (min-width: 768px) {
   #views-hero {
-    padding: 32px 8px;
+    padding: 90px 8px 32px;
   }
 }
 #views-hero h1 {
@@ -1119,7 +1279,7 @@ footer > div ul li a {
     Contact
 ============= */
 #contact-hero {
-  padding: 32px 16px;
+  padding: 90px 16px 32px;
   text-align: center;
 }
 

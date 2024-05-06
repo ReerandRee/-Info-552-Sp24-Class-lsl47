@@ -2,6 +2,10 @@
     Base
 ============= */
 
+html{
+    scroll-behavior: smooth;
+}
+
 ul{
     padding: 0;
     margin: 0;
@@ -13,6 +17,10 @@ ul{
 
 .hide_img{
     display: none;
+}
+
+.header-padding{
+    padding-top: 90px; 
 }
 
 .xxl-grid{

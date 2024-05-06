@@ -1,3 +1,64 @@
 /* =============
     Navigation
 ============= */
+a{
+    text-decoration: none;
+}
+
+.hide-menu{
+    display: none;
+
+    @include md{
+        display: block;
+    }
+}
+#main-nav{
+    background-color: var(--blueDark);
+    padding: 16px;
+
+    // display: none;
+
+    @include md{
+        background-color: var(--white);
+        padding: 0px 16px 0px 0px;
+        display: block;
+    }
+
+
+
+    ul{
+
+        @include md{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        li{
+            // border: 1px solid red;
+            text-align: right;
+
+            a:link, a:visited{
+                display: inline-block;
+                padding: 16px 0;
+                color: var(--white);
+                transition: 0.25s;
+                
+                @include md{
+                    color: var(--blue);
+                }
+
+                i{
+                    color: var(--red);
+                    margin-right: 8px;
+                }
+            }
+
+            a:hover, a:active{
+                color: var(--red);
+            }
+        
+        }
+    }
+
+}

@@ -11,28 +11,36 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/306869f2af.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Week 4</title>
+    <title>Week 6</title>
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img src="img\header\logo.svg" alt="mountain logo"></a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#"><img src="img\header\icons\planning.svg" alt="planning icon">Planning</a>
-                </li>
-                <li>
-                    <a href="#"><img src="img\header\icons\weather.svg" alt="Weather icon">Weather</a>
-                </li>
-                <li>
-                    <a href="views.html"><img src="img\header\icons\views.svg" alt="View icon">View</a>
-                </li>
-                <li>
-                    <a href="contact.html"><img src="img\header\icons\contact.svg" alt="Share icon">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="xl-grid">
+        <div id="header-container" class="xl-grid-item">
+            <div id="logo-container">
+                <a href="index.html"><img src="img\header\logo.svg" alt="mountain logo"></a>
+            </div>
+            <div id="burger-container">
+                <button id="burger-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            
+            <nav id="main-nav" class="hide-menu">
+                <ul>
+                    <li>
+                        <a href="index.html#index-planning"><i class="fa-solid fa-suitcase-rolling"></i>Planning</a>
+                    </li>
+                    <li>
+                        <a href="index.html#index-weather"><i class="fa-regular fa-sun"></i>Weather</a>
+                    </li>
+                    <li>
+                        <a href="views.html"><i class="fa-solid fa-binoculars"></i>Views</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><i class="fa-regular fa-paper-plane"></i>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <section id="contact-hero">
@@ -72,6 +80,7 @@
             </ul>
         </div>
     </footer>
+    <script src="js/scripts-dist.js"></script>
     
 </body>
 
