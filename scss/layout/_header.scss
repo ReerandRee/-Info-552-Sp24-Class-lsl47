@@ -12,60 +12,60 @@ header{
     background-color: var(--white);
 }
 
-#header-container{
-    display: grid;
-    grid-template-columns: 20% auto;
+// #header-container{
+//     display: grid;
+//     grid-template-columns: 20% auto;
 
-    grid-template-areas: 
-    "logo burger" 
-    "nav nav";
+//     grid-template-areas: 
+//     "logo burger" 
+//     "nav nav";
 
 
-    @include md{
-        grid-template-columns: 30% auto;
+//     @include md{
+//         grid-template-columns: 30% auto;
 
-        grid-template-areas: "logo nav";
-    }
+//         grid-template-areas: "logo nav";
+//     }
 
-    @include lg{
-        grid-template-columns: 40% auto;
-    }
+//     @include lg{
+//         grid-template-columns: 40% auto;
+//     }
 
-    @include xl{
-        grid-template-columns: 45% auto;
-    }
+//     @include xl{
+//         grid-template-columns: 45% auto;
+//     }
 
-    @include xxl{
-        grid-template-columns: 50% auto;
-    }
+//     @include xxl{
+//         grid-template-columns: 50% auto;
+//     }
 
-    #logo-container{
-        padding: 16px 0 16px 16px;
-        grid-area: logo;
-    }
+//     #logo-container{
+//         padding: 16px 0 16px 16px;
+//         grid-area: logo;
+//     }
 
-    #burger-container{
-        grid-area: burger;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+//     #burger-container{
+//         grid-area: burger;
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
 
-        @include md{
-            display: none;
-        }
+//         @include md{
+//             display: none;
+//         }
 
-        button{
-            background-color: var(--white);
-            border: none;
-            color: var(--blue);
-            font-size: rem-calc(18);
-            // border: 1px solid red;
-            padding: 16px;
-        }
-    }
+//         button{
+//             background-color: var(--white);
+//             border: none;
+//             color: var(--blue);
+//             font-size: rem-calc(18);
+//             // border: 1px solid red;
+//             padding: 16px;
+//         }
+//     }
 
-    #main-nav{
-        grid-area: nav;
-    }
+//     #main-nav{
+//         grid-area: nav;
+//     }
 
-}
+// }
