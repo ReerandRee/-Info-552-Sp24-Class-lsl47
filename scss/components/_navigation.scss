@@ -1,0 +1,60 @@
+/* =============
+    Navigation
+============= */
+
+a:link, a:visited{
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+#main-nav{
+    background-color: var(--yellow);
+    padding: 24px 16px;
+
+    @include md{
+        background-color: var(--white);
+        padding-bottom: 16px;
+    }
+
+    ul{
+        @include md{
+            display: flex;
+            align-items: center;
+          
+        }
+
+        li{
+            // border: 1px solid red;
+
+
+            @include md{
+                border-right: 2px solid var(--black);
+            }
+
+            a:link, a:visited{
+                font-size: rem-calc(24);
+                padding: 16px 0;
+                display: inline-block;
+                color: var(--black);
+
+                @include md{
+                    padding: 0px 24px;
+                    font-weight: 600;
+                    font-size: rem-calc(18);
+                }
+
+                &:hover, &:active{
+                   
+
+                    @include md{
+                        color: var(--yellow);
+                    }
+                }
+            }
+        }
+
+        li:last-child{
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/* =============
+    Typography
+============= */
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+
+// font-family: "Comfortaa", sans-serif;
+
+// font-family: "Open Sans", sans-serif;
+
+
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700
+// .comfortaa-<uniquifier> {
+    
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+//   }
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+// .open-sans-<uniquifier> {
+   
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+//     font-variation-settings:
+//       "wdth" 100;
+//   }
