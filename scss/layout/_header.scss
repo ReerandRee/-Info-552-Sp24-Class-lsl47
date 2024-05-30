@@ -4,11 +4,10 @@
 
 header{
     display: grid;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 10% auto;
     grid-template-areas: 
-    "burger-container survival-container"
-    "main-nav main-nav";
-    padding: 24px 0 0;
+    "logo-container sitemap-container";
+    padding: 10px 0 0;
     position: fixed;
     top:0;
     left: 0;
@@ -16,31 +15,8 @@ header{
     width: 100%;
     background-color: var(--white);
 
-    @include md{
-        grid-template-columns: 60% auto;
-        grid-template-areas: 
-        "logo-container logo-container"
-        "main-nav survival-container";
-    }
-
-    #burger-container{
-        grid-area: burger-container;
-        padding-left: 16px;
-        display: flex;
-        align-items: center;
-
-        @include md{
-            display: none;
-        }
-
-        button{
-            padding: 0;
-            color: var(--black);
-        }
-    }
-
-    #survival-container{
-        grid-area: survival-container;
+    #sitemap-container{
+        grid-area: sitemap-container;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -51,25 +27,14 @@ header{
 
     #main-nav{
         grid-area: main-nav;
-       
-        @include md{
-            display: block;
-        }
-        // see navigation scss file for styles
     }
 
     #logo-container{
-        display: none;
-
-        @include md{
-            display: block;
-            grid-area: logo-container;
-            text-align: center;
-            padding-bottom: 8px;
-        }
+        display: block;
+        grid-area: logo-container;
+        text-align: center;
+        padding-bottom: 8px;
+        font-size: xx-large;
+        color: black;
     }
-}
-
-.hideMainNavAtMobile{
-     display: none;
 }

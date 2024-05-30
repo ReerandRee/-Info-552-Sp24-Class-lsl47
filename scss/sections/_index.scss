@@ -1,17 +1,31 @@
 /* =============
-    history
+    index
 ============= */
 
-#history{
-    padding: 60px 16px;
 
+
+#hero{
+    background-image: url("../img/philly.png");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 74px;
 
     @include md{
-        display: grid;
-        grid-template-columns: auto 768px auto;
-        grid-template-areas: ". history .";
+        height: 60vh;
+        margin-top: 125px;
     }
 
+    @include lg{
+        height: 70vh;
+    }
+
+    @include xl{
+        height: 85vh;
+    }
+}
+
+#index{
 
     >div{
 
@@ -20,7 +34,7 @@
         }
 
 
-        #history-top{
+        #index-top{
             text-align: center;
 
             @include md{
@@ -31,8 +45,9 @@
             #profile-img{
                 height: 115px;
                 width: 115px;
-                background-image: url("../img/history/history.jpg");
+                background-image: url("../img/leland.jpg");
                 background-position: center;
+                background-repeat: no-repeat;
                 border-radius: 100%;
                 margin: 0 auto;
             }
@@ -66,7 +81,7 @@
             }
         }
 
-        #history-middle{
+        #index-middle{
             p{
                 margin-bottom: 56px;
                 font-size: rem-calc(18);
@@ -76,19 +91,9 @@
             }
         }
 
-        #history-bottom{
+        #index-bottom{
 
-            @include md{
-                padding: 0 7vw;
-            }
-
-            @include lg{
-                padding: 0 5vw;
-            }
-
-            @include xl{
-                padding: 0 3vw;
-            }
+            padding: 0 0 100px;
 
             p{
                 text-align: justify;

@@ -366,8 +366,8 @@ button {
   background-color: transparent;
 }
 
-.primary-yellow-button {
-  background-color: var(--yellow);
+.primary-blue-button {
+  background-color: blue;
   padding: 8px 24px;
   font-weight: 800;
   font-size: 1.125rem;
@@ -377,7 +377,7 @@ button {
   transition: 0.25s;
   cursor: pointer;
 }
-.primary-yellow-button:hover {
+.primary-blue-button:hover {
   background-color: var(--black);
   color: var(--white);
 }
@@ -464,10 +464,10 @@ a:link, a:visited {
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% auto;
-  grid-template-columns: 20% auto;
-      grid-template-areas: "burger-container survival-container" "main-nav main-nav";
-  padding: 24px 0 0;
+  -ms-grid-columns: 10% auto;
+  grid-template-columns: 10% auto;
+      grid-template-areas: "logo-container sitemap-container";
+  padding: 10px 0 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -475,38 +475,10 @@ header {
   width: 100%;
   background-color: var(--white);
 }
-@media (min-width: 768px) {
-  header {
-    -ms-grid-columns: 60% auto;
-    grid-template-columns: 60% auto;
-        grid-template-areas: "logo-container logo-container" "main-nav survival-container";
-  }
-}
-header #burger-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: burger-container;
-  padding-left: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media (min-width: 768px) {
-  header #burger-container {
-    display: none;
-  }
-}
-header #burger-container button {
-  padding: 0;
-  color: var(--black);
-}
-header #survival-container {
+header #sitemap-container {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: survival-container;
+  grid-area: sitemap-container;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,56 +493,63 @@ header #survival-container {
   padding-bottom: 16px;
 }
 header #main-nav {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: main-nav;
 }
-@media (min-width: 768px) {
-  header #main-nav {
-    display: block;
-  }
-}
 header #logo-container {
-  display: none;
-}
-@media (min-width: 768px) {
-  header #logo-container {
-    display: block;
-    grid-area: logo-container;
-    text-align: center;
-    padding-bottom: 8px;
-  }
-}
-@media (min-width: 768px) {
-  header #survival-container {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-  }
-  header #main-nav {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-  header #logo-container {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-}
-
-.hideMainNavAtMobile {
-  display: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  display: block;
+  grid-area: logo-container;
+  text-align: center;
+  padding-bottom: 8px;
+  font-size: xx-large;
+  color: black;
 }
 
 /* =============
     Footer
 ============= */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer p {
+  margin: 0;
+  color: #333;
+}
+
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+footer nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer nav ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
 /* =============
-    Heroes
+    index
 ============= */
 #hero {
-  background-image: url("../img/hero/hero.jpg");
+  background-image: url("../img/philly.png");
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -593,104 +572,229 @@ header #logo-container {
   }
 }
 
-/* =============
-    history
-============= */
-#history {
-  padding: 60px 16px;
-}
 @media (min-width: 768px) {
-  #history {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto 768px auto;
-    grid-template-columns: auto 768px auto;
-        grid-template-areas: ". history .";
-  }
-}
-@media (min-width: 768px) {
-  #history > div {
+  #index > div {
     grid-area: history;
   }
 }
-@media (min-width: 768px) {
-  #history > div {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-}
-#history > div #history-top {
+#index > div #index-top {
   text-align: center;
 }
 @media (min-width: 768px) {
-  #history > div #history-top {
+  #index > div #index-top {
     padding: 0 100px;
   }
 }
-#history > div #history-top #profile-img {
+#index > div #index-top #profile-img {
   height: 115px;
   width: 115px;
-  background-image: url("../img/history/history.jpg");
+  background-image: url("../img/leland.jpg");
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 100%;
   margin: 0 auto;
 }
-#history > div #history-top h1 {
+#index > div #index-top h1 {
   margin: 40px 0 25px;
   color: var(--yellow);
   font-family: "Comfortaa", sans-serif;
   font-size: 3rem;
 }
 @media (min-width: 768px) {
-  #history > div #history-top h1 {
+  #index > div #index-top h1 {
     margin: 40px 0 65px;
     font-size: 3.4375rem;
   }
 }
-#history > div #history-top h1 span {
+#index > div #index-top h1 span {
   font-size: 1.9375rem;
 }
 @media (min-width: 768px) {
-  #history > div #history-top h1 span {
+  #index > div #index-top h1 span {
     font-size: 2.625rem;
   }
 }
-#history > div #history-top p {
+#index > div #index-top p {
   font-size: 1.0625rem;
   margin-bottom: 24px;
 }
 @media (min-width: 768px) {
-  #history > div #history-top p {
+  #index > div #index-top p {
     font-size: 1.1875rem;
     margin-bottom: 34px;
   }
 }
-#history > div #history-middle p {
+#index > div #index-middle p {
   margin-bottom: 56px;
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-weight: 600;
   text-align: justify;
 }
-@media (min-width: 768px) {
-  #history > div #history-bottom {
-    padding: 0 7vw;
-  }
+#index > div #index-bottom {
+  padding: 0 0 100px;
 }
-@media (min-width: 1024px) {
-  #history > div #history-bottom {
-    padding: 0 5vw;
-  }
-}
-@media (min-width: 1200px) {
-  #history > div #history-bottom {
-    padding: 0 3vw;
-  }
-}
-#history > div #history-bottom p {
+#index > div #index-bottom p {
   text-align: justify;
   line-height: 1.25rem;
 }
-#history > div #history-bottom p span {
+#index > div #index-bottom p span {
   font-weight: 800;
+}
+
+/* =============
+    about
+============= */
+#about {
+  padding: 60px 16px;
+}
+/* =============
+    resume
+============= */
+#resume-text {
+  padding: 60px 16px;
+}
+#resume-text body {
+  text-align: left;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+#resume-text .resume-download {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+#resume-text .resume-download:hover {
+  background-color: #0056b3;
+}
+#resume-text .download-btn {
+  color: black;
+}
+#resume-text .resume-container {
+  padding: 20px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#resume-text .resume-header {
+  text-align: center;
+}
+#resume-text .resume-header .profile-img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+#resume-text .resume-header h1 {
+  margin: 10px 0;
+  font-size: 2em;
+}
+#resume-text .resume-header p {
+  margin: 5px 0;
+  color: #666;
+}
+#resume-text .contact-info, #resume-text .education, #resume-text .experience, #resume-text .projects {
+  margin-bottom: 20px;
+}
+#resume-text .experience {
+  margin-bottom: 20px;
+}
+#resume-text .experience ul {
+  padding-left: 30px;
+}
+#resume-text .experience ul li:first-child {
+  list-style-type: none;
+  text-align: right;
+  font-size: small;
+}
+#resume-text .experience ul li {
+  list-style-type: disc;
+}
+#resume-text h2 {
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+#resume-text ul {
+  list-style: none;
+  padding: 0;
+}
+#resume-text li {
+  margin-bottom: 10px;
+}
+#resume-text .education-item, #resume-text .experience-item, #resume-text .project-item {
+  margin-bottom: 20px;
+}
+#resume-text .footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #aaa;
+  border-top: 1px solid #eaeaea;
+}
+
+/* =============
+    projects
+============= */
+#projects {
+  padding: 60px 16px;
+}
+
+#associations {
+  padding-top: 60px;
+}
+
+/* =============
+    contact
+============= */
+#contact {
+  padding: 60px 16px;
+}
+#contact .contact-video {
+  text-align: center;
+}
+
+#site-map {
+  padding: 60px 16px;
+  font-size: x-large;
+}
+@media (min-width: 768px) {
+  #site-map {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 768px auto;
+    grid-template-columns: auto 768px auto;
+        grid-template-areas: ". history .";
+  }
+  #index > div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+#site-map ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+#site-map ul ul {
+  list-style-type: disc;
+  padding-left: 2em;
+}
+#site-map ul ul ul {
+  list-style-type: disc;
+  padding-left: 2em;
+}
+#site-map ul ul ul ul {
+  list-style-type: disc;
+  padding-left: 2em;
 }

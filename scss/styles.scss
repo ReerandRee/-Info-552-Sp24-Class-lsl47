@@ -19,5 +19,10 @@
 @import "layout/_footer";
 
 // Sections Styles
-@import "sections/_heroes";
-@import "sections/_history";
+@import "sections/_index.scss";
+@import "sections/_about.scss";
+@import "sections/_resume.scss";
+@import "sections/_projects.scss";
+@import "sections/_associations.scss";
+@import "sections/_contact.scss";
+@import "sections/_sitemap.scss";

@@ -1,0 +1,27 @@
+#site-map{
+        padding: 60px 16px;
+        font-size: x-large;
+        @include md{
+            display: grid;
+            grid-template-columns: auto 768px auto;
+            grid-template-areas: ". history .";
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1em;
+        }
+        ul ul {
+            list-style-type: disc;
+            padding-left: 2em;
+        }
+        ul ul ul{
+            list-style-type: disc;
+            padding-left: 2em;
+        }
+        ul ul ul ul{
+            list-style-type: disc;
+            padding-left: 2em;
+        }
+        
+}
