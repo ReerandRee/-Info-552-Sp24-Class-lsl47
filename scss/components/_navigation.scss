@@ -8,7 +8,7 @@ a:link, a:visited{
 }
 
 #main-nav{
-    background-color: var(--yellow);
+    background-color: lightblue;
     padding: 24px 16px;
 
     @include md{
@@ -47,7 +47,7 @@ a:link, a:visited{
                    
 
                     @include md{
-                        color: var(--yellow);
+                        color: lightblue;
                     }
                 }
             }

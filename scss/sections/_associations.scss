@@ -1,6 +1,115 @@
 // /* =============
 //     associations
 // ============= */
-#associations{
-        padding-top: 60px;
+
+#asociations-text{
+        padding: 90px 32px 32px;
+
+        @include md{
+                padding: 90px 8px 32px;      
+        }
+        text-align: center;
+        h1{
+                margin-bottom: 32px;
+        }
+        p{
+                color: var(--blue);
+
+                @include xl{
+                        padding: 0 300px;
+                }
+        }
+}
+
+#associations-images{
+
+        padding: 0 16px 32px 16px;
+
+        display: grid;
+        gap: 16px;
+        padding: 0 8vw 32px 8vw;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "g1 g2"
+        "g3 g4"
+        "g5 g6"
+        "g7 g8"
+        "g9 . ";
+
+        @include md{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(5, auto);
+                grid-template-areas: 
+                "g1 g2 g3"
+                "g4 g5 g6"
+                "g7 g8 g9";
+
+        }
+
+        @include xl{
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(5, auto);
+                grid-template-areas: 
+                "g1 g2 g3 g4"
+                "g5 g6 g7 g8"
+                "g9 . . .";
+        }
+
+        li{
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                overflow: hidden;
+                padding-top: 100%; 
+        }
+
+        li > a {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+            }
+        
+
+        #g1{
+                grid-area: g1;
+                background-image: url("../img/asso/gallery-1.jpg");
+        }
+
+        #g2{
+                grid-area: g2;
+                background-image: url("../img/asso/gallery-2.jpg");
+        }
+        #g3{
+                grid-area: g3;
+                background-image: url("../img/asso/gallery-3.jpg");
+        }
+        #g4{
+                grid-area: g4;
+                background-image: url("../img/asso/gallery-4.jpg");
+        }
+        #g5{
+                grid-area: g5;
+                background-image: url("../img/asso/gallery-5.jpg");
+        }
+        #g6{
+                grid-area: g6;
+                background-image: url("../img/asso/gallery-6.jpg");
+        }
+        #g7{
+                grid-area: g7;
+                background-image: url("../img/asso/gallery-7.jpg");
+        }
+        #g8{
+                grid-area: g8;
+                background-image: url("../img/asso/gallery-8.jpg");
+        }
+        #g9{
+                grid-area: g9;
+                background-image: url("../img/asso/gallery-9.jpg");
+        }
 }

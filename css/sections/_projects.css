@@ -2,5 +2,11 @@
     projects
 ============= */
 #projects {
-  padding: 60px 16px;
+  padding: 75px 30px 30px;
+}
+#projects .project-intro {
+  padding-bottom: 30px;
+}
+#projects .project-item {
+  margin-bottom: 20px;
 }

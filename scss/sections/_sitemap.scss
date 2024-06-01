@@ -1,27 +1,77 @@
-#site-map{
-        padding: 60px 16px;
-        font-size: x-large;
-        @include md{
-            display: grid;
-            grid-template-columns: auto 768px auto;
-            grid-template-areas: ". history .";
-        }
+#site-map {
+    padding: 60px 16px;
+    font-size: xx-large;
+    color: #333; /* Adjust the color to your preference */
+    font-family: Arial, sans-serif; /* Adjust the font to your preference */
+    list-style-type: disc;
+    ul {
+        list-style-type: disc;
+        padding-left: 0;
+        margin-left: 0;
+    }
 
-        ul {
-            list-style-type: none;
-            padding-left: 1em;
-        }
-        ul ul {
-            list-style-type: disc;
-            padding-left: 2em;
-        }
-        ul ul ul{
-            list-style-type: disc;
-            padding-left: 2em;
-        }
-        ul ul ul ul{
-            list-style-type: disc;
-            padding-left: 2em;
-        }
+    ul ul {
+        list-style-type: circle;
+        padding-left: 60px;
+    }
+
+    ul ul ul {
+        list-style-type: square;
+        padding-left: 100px;
+    }
+
+    ul ul ul ul {
+        list-style-type: square;
+        padding-left: 140px;
+    }
+
+    li {
         
+        margin: 10px 0;
+        position: relative;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #007BFF; /* Link color */
+        transition: color 0.3s ease, background-color 0.3s ease;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    li a:hover {
+        color: #0056b3; /* Hover color */
+        background-color: #f0f0f0; /* Background color on hover */
+        text-decoration: underline; /* Underline on hover */
+    }
+
+    /* Adding icons to list items */
+    li:before {
+        content: "•"; /* You can change the icon or symbol */
+        color: #007BFF; /* Icon color */
+        position: absolute;
+        left: -1em;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    ul ul li:before {
+        content: "–"; /* Different symbol for nested lists */
+    }
+
+    ul ul ul li:before {
+        content: "•"; /* Different symbol for deeper nested lists */
+    }
+
+    ul ul ul ul li:before {
+        content: "◦"; /* Different symbol for even deeper nested lists */
+    }
+}
+
+#sitemap-hero{
+    background-image: url("../img/sitemap.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
 }

@@ -14,6 +14,7 @@ header{
     right:0;
     width: 100%;
     background-color: var(--white);
+    z-index: 1000;
 
     #sitemap-container{
         grid-area: sitemap-container;
@@ -36,5 +37,41 @@ header{
         padding-bottom: 8px;
         font-size: xx-large;
         color: black;
+    }
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+#header-title{
+    position: fixed;
+    white-space: nowrap; 
+    @include xs{
+        padding: 0 10vw;
+    }
+    @include sm{
+        padding: 0 15vw;
+    }
+    @include md{
+        padding: 0 40vw;
+    }
+    
+}
+
+.primary-blue-button{
+    background-color: lightskyblue;
+    padding: 8px 24px;
+    font-weight: 800;
+    font-size: rem-calc(18);
+    color: var(--black);
+    border-radius: 23px;
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--black);
+        color: var(--white);
     }
 }
