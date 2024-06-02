@@ -12,21 +12,23 @@
     margin-top: 74px;
 
     @include md{
-        height: 60vh;
+        height: 30vh;
         margin-top: 125px;
     }
 
     @include lg{
-        height: 70vh;
+        height: 40vh;
     }
 
     @include xl{
-        height: 85vh;
+        height: 50vh;
     }
 }
 
 #index{
 
+    padding-left: 10px;
+    padding-right: 10px;
     >div{
 
         @include md{
@@ -36,11 +38,6 @@
 
         #index-top{
             text-align: center;
-
-            @include md{
-                padding: 0px;
-            }
-
 
             #profile-img{
                 height: 115px;

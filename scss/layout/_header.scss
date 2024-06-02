@@ -4,37 +4,37 @@
 
 header{
     display: grid;
-    grid-template-columns: 10% auto;
+    grid-template-columns: 1fr auto 1fr;
     grid-template-areas: 
-    "logo-container sitemap-container";
-    padding: 10px 0 0;
+        "logo-container header-title sitemap-container";
+    padding-top: 15px;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
-    right:0;
+    right: 0;
     width: 100%;
     background-color: var(--white);
     z-index: 1000;
 
-    #sitemap-container{
+    #sitemap-container {
         grid-area: sitemap-container;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding-right: 16px;
         height: 100%;
-        padding-bottom: 16px;
     }
 
     #main-nav{
         grid-area: main-nav;
     }
 
-    #logo-container{
-        display: block;
+    #logo-container {
         grid-area: logo-container;
-        text-align: center;
-        padding-bottom: 8px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding-left: 16px;
         font-size: xx-large;
         color: black;
     }
@@ -45,19 +45,14 @@ button{
     background-color: transparent;
 }
 
-#header-title{
-    position: fixed;
-    white-space: nowrap; 
-    @include xs{
-        padding: 0 10vw;
-    }
-    @include sm{
-        padding: 0 15vw;
-    }
-    @include md{
-        padding: 0 40vw;
-    }
-    
+#header-title {
+    grid-area: header-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large; /* Adjust as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .primary-blue-button{

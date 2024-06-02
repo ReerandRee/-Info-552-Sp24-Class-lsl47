@@ -444,10 +444,10 @@ a:link, a:visited {
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% auto;
-  grid-template-columns: 10% auto;
-      grid-template-areas: "logo-container sitemap-container";
-  padding: 10px 0 0;
+  -ms-grid-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
+      grid-template-areas: "logo-container header-title sitemap-container";
+  padding-top: 15px;
   position: fixed;
   top: 0;
   left: 0;
@@ -458,7 +458,7 @@ header {
 }
 header #sitemap-container {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   grid-area: sitemap-container;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,7 +471,6 @@ header #sitemap-container {
           align-items: center;
   padding-right: 16px;
   height: 100%;
-  padding-bottom: 16px;
 }
 header #main-nav {
   grid-area: main-nav;
@@ -479,10 +478,17 @@ header #main-nav {
 header #logo-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  display: block;
   grid-area: logo-container;
-  text-align: center;
-  padding-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 16px;
   font-size: xx-large;
   color: black;
 }
@@ -493,23 +499,21 @@ button {
 }
 
 #header-title {
-  position: fixed;
-  white-space: nowrap;
-}
-@media (min-width: 0) {
-  #header-title {
-    padding: 0 10vw;
-  }
-}
-@media (min-width: 576px) {
-  #header-title {
-    padding: 0 15vw;
-  }
-}
-@media (min-width: 768px) {
-  #header-title {
-    padding: 0 40vw;
-  }
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header-title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: x-large; /* Adjust as needed */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .primary-blue-button {
@@ -579,21 +583,25 @@ footer nav ul li a:hover {
 }
 @media (min-width: 768px) {
   #hero {
-    height: 60vh;
+    height: 30vh;
     margin-top: 125px;
   }
 }
 @media (min-width: 1024px) {
   #hero {
-    height: 70vh;
+    height: 40vh;
   }
 }
 @media (min-width: 1200px) {
   #hero {
-    height: 85vh;
+    height: 50vh;
   }
 }
 
+#index {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 @media (min-width: 768px) {
   #index > div {
     grid-area: history;
@@ -601,11 +609,6 @@ footer nav ul li a:hover {
 }
 #index > div #index-top {
   text-align: center;
-}
-@media (min-width: 768px) {
-  #index > div #index-top {
-    padding: 0px;
-  }
 }
 #index > div #index-top #profile-img {
   height: 115px;
