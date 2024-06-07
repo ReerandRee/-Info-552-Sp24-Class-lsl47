@@ -14,10 +14,13 @@
         }
         p{
                 color: var(--blue);
-
-                @include xl{
-                        padding: 0 300px;
+                @include xs{
+                        font-size: rem-calc(12);
                 }
+                @include md{
+                        font-size: rem-calc(25);
+                        padding-left: 100px;
+                        padding-right: 100px;                }
         }
 }
 
