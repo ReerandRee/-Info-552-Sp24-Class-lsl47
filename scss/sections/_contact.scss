@@ -2,8 +2,13 @@
     contact
 ============= */
 #contact{
-        padding: 60px 16px;
+        padding: 100px 60px;
+        font-size: rem-calc(30);
         .contact-video{
+                >h2{
+                        padding-top: 30px;
+                        padding-bottom: 50px;
+                }
                 text-align: center;
         }
         }

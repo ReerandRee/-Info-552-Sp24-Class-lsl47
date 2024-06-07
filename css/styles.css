@@ -334,6 +334,19 @@ template {
 /* =============
     Base
 ============= */
+body {
+  margin: 0;
+  padding: 10px 15px;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/background/background.png");
+  background-position: center; /* Center the image */
+  background-repeat: repeat-y;
+  background-color: lightblue;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -599,8 +612,9 @@ footer nav ul li a:hover {
 }
 
 #index {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 30px;
+  padding-right: 60px;
+  padding-bottom: 100px;
 }
 @media (min-width: 768px) {
   #index > div {
@@ -623,26 +637,18 @@ footer nav ul li a:hover {
   margin: 40px 0 25px;
   color: lightblue;
   font-family: "Comfortaa", sans-serif;
-  font-size: 3rem;
-}
-#index > div #index-top h1 span {
-  font-size: 1.9375rem;
-}
-@media (min-width: 768px) {
-  #index > div #index-top h1 span {
-    font-size: 2.625rem;
-  }
+  font-size: 4rem;
 }
 #index > div #index-top p {
   color: darkblue;
   font-family: "Comfortaa", sans-serif;
-  font-size: 1.1875rem;
+  font-size: 1.5rem;
   margin-bottom: 34px;
 }
 #index > div #index-middle p {
   margin-bottom: 56px;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
   font-weight: 600;
   text-align: justify;
 }
@@ -651,6 +657,7 @@ footer nav ul li a:hover {
 }
 #index > div #index-bottom p {
   text-align: justify;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 #index > div #index-bottom p span {
@@ -661,7 +668,8 @@ footer nav ul li a:hover {
     about
 ============= */
 #about {
-  padding: 60px 16px;
+  padding: 75px 10px;
+  font-size: x-large;
 }
 
 /* =============
@@ -975,14 +983,19 @@ footer nav ul li a:hover {
     contact
 ============= */
 #contact {
-  padding: 60px 16px;
+  padding: 100px 60px;
+  font-size: 1.875rem;
 }
 #contact .contact-video {
   text-align: center;
 }
+#contact .contact-video > h2 {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
 
 #site-map {
-  padding: 60px 16px;
+  padding: 60px 40px;
   font-size: xx-large;
   color: #333; /* Adjust the color to your preference */
   font-family: Arial, sans-serif; /* Adjust the font to your preference */
