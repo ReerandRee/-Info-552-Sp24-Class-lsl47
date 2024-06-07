@@ -1,9 +1,11 @@
 // /* =============
 //     associations
 // ============= */
-
-#asociations-text{
-        padding: 90px 32px 32px;
+#associations{
+        padding: 20px 32px 100px 32px;
+}
+#associations-text{
+        padding: 60px 0px 32px 32px;
 
         @include md{
                 padding: 90px 8px 32px;      

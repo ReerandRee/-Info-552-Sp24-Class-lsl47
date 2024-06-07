@@ -676,7 +676,7 @@ footer nav ul li a:hover {
     resume
 ============= */
 #resume-text {
-  padding: 60px 16px;
+  padding: 60px 16px 100px 16px;
 }
 #resume-text body {
   text-align: left;
@@ -772,7 +772,7 @@ footer nav ul li a:hover {
     projects
 ============= */
 #projects {
-  padding: 75px 30px 30px;
+  padding: 75px 30px 150px 30px;
 }
 #projects .project-intro {
   padding-bottom: 30px;
@@ -781,28 +781,32 @@ footer nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-#asociations-text {
-  padding: 90px 32px 32px;
+#associations {
+  padding: 20px 32px 100px 32px;
+}
+
+#associations-text {
+  padding: 60px 0px 32px 32px;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #asociations-text {
+  #associations-text {
     padding: 90px 8px 32px;
   }
 }
-#asociations-text h1 {
+#associations-text h1 {
   margin-bottom: 32px;
 }
-#asociations-text p {
+#associations-text p {
   color: var(--blue);
 }
 @media (min-width: 0) {
-  #asociations-text p {
+  #associations-text p {
     font-size: 0.75rem;
   }
 }
 @media (min-width: 768px) {
-  #asociations-text p {
+  #associations-text p {
     font-size: 1.5625rem;
     padding-left: 100px;
     padding-right: 100px;
@@ -1003,7 +1007,7 @@ footer nav ul li a:hover {
 }
 
 #site-map {
-  padding: 60px 40px;
+  padding: 60px 40px 60px 30px;
   font-size: xx-large;
   color: #333; /* Adjust the color to your preference */
   font-family: Arial, sans-serif; /* Adjust the font to your preference */
@@ -1068,4 +1072,5 @@ footer nav ul li a:hover {
   background-size: cover;
   background-position: center;
   margin-top: 15px;
+  margin-bottom: 100px;
 }
