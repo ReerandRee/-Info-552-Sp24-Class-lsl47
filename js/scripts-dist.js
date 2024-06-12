@@ -1,0 +1,1 @@
+document.getElementById("profile-img").addEventListener("click",(function(){this.style.display="none"}));

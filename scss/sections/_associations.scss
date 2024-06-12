@@ -30,6 +30,11 @@
 
         padding: 0 16px 32px 16px;
 
+        //This is giving me a parse error in W3 css validator 
+        //Parse Error (1fr)[3] 
+        //Parse Error (auto)[5] 
+        //but all seem fine to me so I will ignore it
+        
         display: grid;
         gap: 16px;
         padding: 0 8vw 32px 8vw;
